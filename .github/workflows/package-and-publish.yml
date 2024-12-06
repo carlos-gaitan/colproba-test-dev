@@ -19,7 +19,8 @@ jobs:
     - name: Package application
       run: |
         mkdir -p output
-        tar -czf output/app.tar.gz .
+        tar -czf output/app.tar.gz ./app/*
+        #tar -czf output/app.tar.gz -C ./app .
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
